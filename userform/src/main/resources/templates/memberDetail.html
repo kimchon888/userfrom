@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Chi tiết thành viên</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<h1>Chi tiết thành viên</h1>
+<div th:if="${member != null}">
+    <p><strong>ID:</strong> <span th:text="${member.id}"></span></p>
+    <p><strong>Tên:</strong> <span th:text="${member.name}"></span></p>
+    <p><strong>Email:</strong> <span th:text="${member.email}"></span></p>
+    <p><strong>Ngày sinh:</strong> <span th:text="${member.dateOfBirth}"></span></p>
+</div>
+<div th:if="${member == null}">
+    <p>Không tìm thấy thành viên!</p>
+</div>
+<a href="/">Quay lại danh sách</a>
+</body>
+</html>

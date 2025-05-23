@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Danh sách thành viên</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<h1>Danh sách thành viên trong nhóm</h1>
+<ul>
+    <li th:each="member : ${members}">
+        <a th:href="@{/member/{id}(id=${member.id})}" th:text="${member.name}"></a>
+    </li>
+</ul>
+</body>
+</html>
